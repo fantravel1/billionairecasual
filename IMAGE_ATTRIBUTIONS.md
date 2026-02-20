@@ -66,6 +66,88 @@ All images are sourced from Wikimedia Commons and licensed under Creative Common
 - **Industry**: Entertainment / Media
 - **Style Archetype**: The Entertainment Mogul
 
+## Additional Profiles (Expanded Database)
+
+### 7. Rihanna (Fenty Founder)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Rihanna_2016.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Fenty founder (cosmetics and fashion)
+- **Net Worth**: $1.7B (self-made billionaire)
+- **Industry**: Fashion / Beauty / Entertainment
+- **Style Archetype**: Creative Founder / Entertainment Mogul
+
+### 8. Sara Blakely (Spanx Founder)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Sara_Blakely_2012.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: First self-made female billionaire (Spanx)
+- **Net Worth**: $1B+ (self-made billionaire)
+- **Industry**: Fashion / Retail / Innovation
+- **Style Archetype**: The Creative Founder
+
+### 9. Alice Walton (Walmart Heiress)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Alice_Walton_2012.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Walmart heiress
+- **Net Worth**: $60B+ (inherited wealth)
+- **Industry**: Retail / Inherited
+- **Style Archetype**: The Heritage Heiress (American variation)
+
+### 10. Abigail Johnson (Fidelity Investments CEO)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Abigail_Johnson_2011.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Fidelity Investments CEO and heiress
+- **Net Worth**: $25B+ (inherited leadership)
+- **Industry**: Finance / Investment Management
+- **Style Archetype**: The Heritage Heiress (Finance)
+
+### 11. Jacqueline Mars (Mars Inc Heiress)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Jacqueline_Mars.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Mars Inc heiress (Mars candy company)
+- **Net Worth**: $35B+ (inherited wealth)
+- **Industry**: Consumer Goods / Inherited
+- **Style Archetype**: The Heritage Heiress (American old money)
+
+### 12. Julia Koch (Koch Industries Heiress)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Julia_Koch_2019.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Koch Industries heiress (through marriage)
+- **Net Worth**: $60B+ (inherited wealth)
+- **Industry**: Industrial / Inherited
+- **Style Archetype**: The Heritage Heiress (Conservative wealth)
+
+### 13. Kylie Jenner (Kylie Cosmetics Founder)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Kylie_Jenner_2016.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Kylie Cosmetics founder (self-made at age 20+)
+- **Net Worth**: $1B+ (youngest self-made billionaire)
+- **Industry**: Beauty / Technology / Social Media
+- **Style Archetype**: The Wellness Empress (Athleisure variation)
+
+### 14. Miriam Adelson (Las Vegas Sands Heiress)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Miriam_Adelson_2020.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Las Vegas Sands heiress
+- **Net Worth**: $35B+ (inherited wealth)
+- **Industry**: Hospitality / Inherited
+- **Style Archetype**: Glamorous Old Money
+
 ## Usage Rights
 
 All images displayed on BillionaireCasual.com are:

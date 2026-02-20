@@ -148,6 +148,63 @@ All images are sourced from Wikimedia Commons and licensed under Creative Common
 - **Industry**: Hospitality / Inherited
 - **Style Archetype**: Glamorous Old Money
 
+## International Billionaires
+
+### 15. Susanne Klatten (BMW/Pharmaceutical Heiress - Germany)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Susanne_Klatten_2008.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: BMW and Altana pharmaceutical heiress
+- **Net Worth**: $60B+ (inherited wealth)
+- **Industry**: Automotive / Pharmaceuticals / Inherited
+- **Style Archetype**: German Industrial Elegance
+- **Geographic Diversity**: Europe - Germany
+
+### 16. Yang Huiyan (Evergrande Real Estate - China)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Yang_Huiyan_at_CBRE_Greater_China_Forum_2015.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Evergrande Group real estate heiress
+- **Net Worth**: $65B+ (inherited wealth)
+- **Industry**: Real Estate / Property Development
+- **Style Archetype**: Modern Chinese Wealth
+- **Geographic Diversity**: Asia - China
+
+### 17. Wu Yajun (Longfor Properties - China)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Wu_Yajun.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Longfor Properties founder and CEO
+- **Net Worth**: $10B+ (self-made billionaire)
+- **Industry**: Real Estate / Property Development
+- **Style Archetype**: Self-Made Contemporary Professional
+- **Geographic Diversity**: Asia - China
+
+### 18. Iris Fontbona (Antofagasta Minerals - Chile)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Iris_Fontbona_2019.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Antofagasta Minerals mining heiress
+- **Net Worth**: $40B+ (inherited wealth)
+- **Industry**: Mining / Natural Resources
+- **Style Archetype**: South American Old Money Elegance
+- **Geographic Diversity**: South America - Chile
+
+### 19. Victoria Mars (Mars Inc - United States)
+- **License**: CC BY-SA 3.0
+- **Source**: Wikimedia Commons
+- **URL**: https://commons.wikimedia.org/wiki/File:Victoria_mars_2018.jpg
+- **Credit**: Wikimedia Commons
+- **Billionaire Profile**: Mars Inc board member and heiress
+- **Net Worth**: $8B+ (inherited wealth)
+- **Industry**: Consumer Goods / Candy / Retail
+- **Style Archetype**: American Heritage Heiress
+- **Geographic Diversity**: North America - United States
+
 ## Usage Rights
 
 All images displayed on BillionaireCasual.com are:

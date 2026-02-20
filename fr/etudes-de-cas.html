@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Études de Cas Garde-robe - BillionaireCasual</title>
+  <style>
+    :root {
+      --color-primary: #000;
+      --color-secondary: #666;
+      --color-text: #333;
+      --color-text-light: #666;
+      --color-bg: #fff;
+      --color-border: #eee;
+      --color-link: #0066cc;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --fs-xs: 0.75rem;
+      --fs-sm: 0.875rem;
+      --fs-base: 1rem;
+      --fs-lg: 1.25rem;
+      --fs-xl: 1.5rem;
+      --fs-2xl: 2rem;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); color: var(--color-text); background: var(--color-bg); line-height: 1.6; }
+
+    .header {
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-lg) var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+
+    .header h1 {
+      font-size: var(--fs-2xl);
+      margin-bottom: var(--space-sm);
+    }
+
+    .header p {
+      color: var(--color-text-light);
+      font-size: var(--fs-lg);
+    }
+
+    .nav {
+      display: flex;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+      padding: 0 var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--color-link);
+      text-decoration: none;
+      font-weight: 500;
+      padding: var(--space-sm);
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .nav a:hover {
+      border-bottom-color: var(--color-link);
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-md); }
+
+    .case-study {
+      margin-bottom: var(--space-xl);
+      padding: var(--space-lg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+    }
+
+    .case-study h2 {
+      font-size: var(--fs-xl);
+      margin-bottom: var(--space-sm);
+    }
+
+    .meta {
+      display: flex;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      font-size: var(--fs-sm);
+      color: var(--color-text-light);
+      flex-wrap: wrap;
+    }
+
+    .meta span {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .style-summary {
+      background: #f9f9f9;
+      padding: var(--space-md);
+      border-radius: 6px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .style-summary h3 {
+      font-size: var(--fs-base);
+      margin-bottom: var(--space-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: var(--fs-sm);
+    }
+
+    .style-summary p {
+      line-height: 1.8;
+      color: var(--color-text-light);
+    }
+
+    .outfits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+
+    .outfit {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .outfit:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .outfit-image {
+      width: 100%;
+      aspect-ratio: 2/3;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--fs-sm);
+      color: var(--color-text-light);
+      font-style: italic;
+    }
+
+    .outfit-details {
+      padding: var(--space-md);
+    }
+
+    .outfit-title {
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      font-size: var(--fs-sm);
+    }
+
+    .outfit-desc {
+      font-size: var(--fs-sm);
+      color: var(--color-text-light);
+      line-height: 1.6;
+      margin-bottom: var(--space-sm);
+    }
+
+    .outfit-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      font-size: var(--fs-xs);
+    }
+
+    .breakdown-item {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: var(--space-xs);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .breakdown-label {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .breakdown-value {
+      color: var(--color-text-light);
+    }
+
+    .tags {
+      display: flex;
+      gap: var(--space-xs);
+      flex-wrap: wrap;
+      margin-top: var(--space-sm);
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f0f0f0;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: var(--fs-xs);
+      color: var(--color-text-light);
+    }
+
+    .key-insight {
+      background: #f0f8ff;
+      border-left: 4px solid var(--color-link);
+      padding: var(--space-md);
+      margin-bottom: var(--space-lg);
+      border-radius: 4px;
+    }
+
+    .key-insight strong {
+      color: var(--color-link);
+      display: block;
+      font-size: var(--fs-sm);
+      margin-bottom: var(--space-xs);
+    }
+
+    .footer {
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+      color: var(--color-text-light);
+      font-size: var(--fs-sm);
+      border-top: 1px solid var(--color-border);
+      margin-top: var(--space-xl);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: var(--space-lg);
+      color: var(--color-link);
+      text-decoration: none;
+      font-size: var(--fs-sm);
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .outfits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      .nav {
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Études de Cas Garde-robe</h1>
+      <p>Analyses approfondies des vêtements de détente des femmes milliardaires</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="nav">
+      <a href="../fr/index.html">← Retour à l'accueil</a>
+      <a href="../fr/indice-femmes.html">Tous les Profils</a>
+    </div>
+
+    <!-- RIHANNA Étude de Cas -->
+    <div class="case-study" id="rihanna">
+      <h2>Rihanna (Fenty)</h2>
+      <div class="meta">
+        <span>💰 Valeur Nette: $1.7B</span>
+        <span>🎯 Archétype: Fondatrice Créative</span>
+        <span>🏷️ Score Logo: 2/10</span>
+        <span>🏗️ Architecture: 10/10</span>
+      </div>
+
+      <div class="style-summary">
+        <h3>Philosophie du Style</h3>
+        <p>Le style décontracté de Rihanna est la direction artistique étudiée déguisée en sans effort. Chaque blazer oversized est associé à une précision architecturale. Zéro logos visibles car la qualité parle d'abord. Sa garde-robe démontre une maîtrise complète de l'échelle, de la proportion et de l'artisanat du designer. Elle ne suit pas les tendances—elle les architecture.</p>
+      </div>
+
+      <div class="key-insight">
+        <strong>Découverte Clé:</strong> La garde-robe de Rihanna prouve que casual ne signifie pas simple. Ses tenues contiennent une complexité architecturale qui nécessite des connaissances en design significatives à exécuter. Elle construit essentiellement des tenues comme des systèmes de conception.
+      </div>
+
+      <div class="outfits-grid">
+        <div class="outfit">
+          <div class="outfit-image">Blazer Surdimensionné + Pantalon Ajusté</div>
+          <div class="outfit-details">
+            <div class="outfit-title">La Fondation Architecturale</div>
+            <div class="outfit-desc">Blazer crème surdimensionné, pantalon noir ajusté, bijoux minimaux. C'est l'uniforme de Rihanna: structure précise cachée sous volume généreux.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Silhouette</span>
+                <span class="breakdown-value">Surdimensionné + Ajusté</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Palette de Couleurs</span>
+                <span class="breakdown-value">Neutre (Crème/Noir)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Pièces Clés</span>
+                <span class="breakdown-value">Blazer Designer, Pantalon Taille Haute</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Architectural</span>
+              <span class="tag">Minimaliste</span>
+              <span class="tag">Haute Couture</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="outfit">
+          <div class="outfit-image">Manteau Déclaratif + Base Simple</div>
+          <div class="outfit-details">
+            <div class="outfit-title">Le Jeu de Volume</div>
+            <div class="outfit-desc">Manteau de laine surdimensionné (coupe architecturale), t-shirt blanc simple, jeans ajusté. Le manteau fait tout le travail visuel tandis que la base reste intentionnellement simple.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Silhouette</span>
+                <span class="breakdown-value">Vêtement Déclaratif</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Couche de Base</span>
+                <span class="breakdown-value">T-Shirt Blanc + Denim</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Visibilité de la Marque</span>
+                <span class="breakdown-value">1/10</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Pièce Déclarative</span>
+              <span class="tag">Focalisé sur la Proportion</span>
+              <span class="tag">Luxe Décontracté</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="key-insight">
+        <strong>Pourquoi C'est Important:</strong> La garde-robe de Rihanna prouve que le casual n'implique pas la simplicité. Ses tenues contiennent une complexité architecturale qui nécessite des connaissances en design significatives à exécuter. Elle construit essentiellement des tenues comme des systèmes de conception.
+      </div>
+    </div>
+
+    <!-- MELANIE PERKINS Étude de Cas -->
+    <div class="case-study" id="melanie">
+      <h2>Melanie Perkins (Canva)</h2>
+      <div class="meta">
+        <span>💰 Valeur Nette: $26B Valorisation</span>
+        <span>🎯 Archétype: Minimaliste Fondatrice Tech</span>
+        <span>🏷️ Score Logo: 0/10</span>
+        <span>👕 Uniforme: 10/10</span>
+      </div>
+
+      <div class="style-summary">
+        <h3>Philosophie du Style</h3>
+        <p>Melanie Perkins est le poster de la systématisation délibérée de la garde-robe. Elle porte le même uniforme à plusieurs reprises: col roulé sombre, pantalon noir ajusté, bijoux minimaux. Ce n'est pas de la paresse—c'est une prise de décision stratégique. En supprimant complètement les décisions de garde-robe, elle élimine la fatigue décisionnelle et consacre toute son énergie cognitive à la construction d'une entreprise de $26B.</p>
+      </div>
+
+      <div class="key-insight">
+        <strong>Découverte Clé:</strong> L'approche uniforme de Melanie reflète exactement la stratégie de Steve Jobs. Cols roulés sombres répétitifs, basiques ajustés, zéro logos. L'objectif psychologique: construire un système pour ne jamais avoir à penser aux vêtements à nouveau.
+      </div>
+
+      <div class="outfits-grid">
+        <div class="outfit">
+          <div class="outfit-image">Col Roulé Noir + Pantalon Noir Ajusté</div>
+          <div class="outfit-details">
+            <div class="outfit-title">L'Uniforme Quotidien</div>
+            <div class="outfit-desc">Col roulé en laine mérinos sombre, pantalon noir ajusté, montre minimaliste. C'est l'uniforme de travail par défaut de Melanie. Porté à plusieurs reprises car le point est la cohérence, pas la variété.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Vêtements</span>
+                <span class="breakdown-value">Col Roulé + Pantalon</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Palette de Couleurs</span>
+                <span class="breakdown-value">Monochrome Noir</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Prise de Décision</span>
+                <span class="breakdown-value">Automatisée</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Uniforme</span>
+              <span class="tag">Minimaliste</span>
+              <span class="tag">Intentionnel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="key-insight">
+        <strong>Pourquoi C'est Important:</strong> L'approche de Melanie démontre que les fondateurs de tech les plus réussis éliminent souvent complètement la mode de leur processus décisionnel. En portant le même vêtement à plusieurs reprises, elle a éliminé les décisions de garde-robe—libérant son esprit pour les décisions de produit.
+      </div>
+    </div>
+
+    <!-- FRANCOISE BETTENCOURT MEYERS Étude de Cas -->
+    <div class="case-study" id="francoise">
+      <h2>Francoise Bettencourt Meyers (L'Oréal)</h2>
+      <div class="meta">
+        <span>💰 Valeur Nette: $95.2B (Femme la Plus Riche du Monde)</span>
+        <span>🎯 Archétype: Héritière de Patrimoine</span>
+        <span>🏷️ Score Logo: 0/10</span>
+        <span>✨ Ajustement: 10/10</span>
+      </div>
+
+      <div class="style-summary">
+        <h3>Philosophie du Style</h3>
+        <p>Francoise Bettencourt Meyers représente la retenue de l'argent ancien au plus haut niveau. En tant que femme la plus riche du monde et héritière de L'Oréal, elle s'habille avec un minimalisme absolu: navy, crème et camel uniquement. Chaque pièce est ajustée par le même atelier. Elle ne poursuit pas les tendances car sa richesse est générationnelle—transcendant les cycles de mode. Sa garde-robe est une masterclass en signalisation de richesse héritée par un raffinement absolu.</p>
+      </div>
+
+      <div class="key-insight">
+        <strong>Découverte Clé:</strong> Avec une valeur nette de $95B, Francoise a ZÉRO besoin de signaliser la richesse par le branding visible. Ses tenues communiquent l'héritage par une précision d'ajustement, une qualité de tissu et une simplicité étudiée. C'est le sommet de la mode argent ancien.
+      </div>
+
+      <div class="outfits-grid">
+        <div class="outfit">
+          <div class="outfit-image">Blazer Marine + Chemise Soie Crème</div>
+          <div class="outfit-details">
+            <div class="outfit-title">La Combinaison Classique</div>
+            <div class="outfit-desc">Blazer marine ajusté sur mesure, chemise en soie crème, bijoux minimaux. C'est la signature de Francoise: ajustement parfait, palette neutre, autorité héritée.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Blazer</span>
+                <span class="breakdown-value">Laine Marine Sur Mesure</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Chemise</span>
+                <span class="breakdown-value">Soie (Crème/Blanc)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Accessoires</span>
+                <span class="breakdown-value">Minimal (Bijoux de Qualité)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Visibilité de la Marque</span>
+                <span class="breakdown-value">0/10 (Zéro Logo)</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Sur Mesure</span>
+              <span class="tag">Héritage</span>
+              <span class="tag">Intemporel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="key-insight">
+        <strong>Pourquoi C'est Important:</strong> Francoise représente le sommet absolu de la mode argent ancien. Avec $95B en richesse héritée, elle n'a ZÉRO besoin d'afficher des marques ou des logos. Sa garde-robe communique par un ajustement parfait, une palette de couleurs restreinte (navy, crème, camel uniquement) et un ajustement de précision. C'est ce que la richesse ressemble quand elle est si profonde que la visibilité devient sans pertinence.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>BillionaireCasual.com — Études de Cas Garde-robe</p>
+    <p>Analyse détaillée des vêtements de détente réels des femmes milliardaires.</p>
+  </div>
+</body>
+</html>

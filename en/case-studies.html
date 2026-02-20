@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wardrobe Case Studies - BillionaireCasual</title>
+  <style>
+    :root {
+      --color-primary: #000;
+      --color-secondary: #666;
+      --color-text: #333;
+      --color-text-light: #666;
+      --color-bg: #fff;
+      --color-border: #eee;
+      --color-link: #0066cc;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --fs-xs: 0.75rem;
+      --fs-sm: 0.875rem;
+      --fs-base: 1rem;
+      --fs-lg: 1.25rem;
+      --fs-xl: 1.5rem;
+      --fs-2xl: 2rem;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); color: var(--color-text); background: var(--color-bg); line-height: 1.6; }
+
+    .header {
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-lg) var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+
+    .header h1 {
+      font-size: var(--fs-2xl);
+      margin-bottom: var(--space-sm);
+    }
+
+    .header p {
+      color: var(--color-text-light);
+      font-size: var(--fs-lg);
+    }
+
+    .nav {
+      display: flex;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+      padding: 0 var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--color-link);
+      text-decoration: none;
+      font-weight: 500;
+      padding: var(--space-sm);
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .nav a:hover {
+      border-bottom-color: var(--color-link);
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-md); }
+
+    .case-study {
+      margin-bottom: var(--space-xl);
+      padding: var(--space-lg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+    }
+
+    .case-study h2 {
+      font-size: var(--fs-xl);
+      margin-bottom: var(--space-sm);
+    }
+
+    .meta {
+      display: flex;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      font-size: var(--fs-sm);
+      color: var(--color-text-light);
+    }
+
+    .meta span {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .style-summary {
+      background: #f9f9f9;
+      padding: var(--space-md);
+      border-radius: 6px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .style-summary h3 {
+      font-size: var(--fs-base);
+      margin-bottom: var(--space-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: var(--fs-sm);
+    }
+
+    .style-summary p {
+      line-height: 1.8;
+      color: var(--color-text-light);
+    }
+
+    .outfits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+
+    .outfit {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .outfit:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .outfit-image {
+      width: 100%;
+      aspect-ratio: 2/3;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--fs-sm);
+      color: var(--color-text-light);
+      font-style: italic;
+    }
+
+    .outfit-details {
+      padding: var(--space-md);
+    }
+
+    .outfit-title {
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+      font-size: var(--fs-sm);
+    }
+
+    .outfit-desc {
+      font-size: var(--fs-sm);
+      color: var(--color-text-light);
+      line-height: 1.6;
+      margin-bottom: var(--space-sm);
+    }
+
+    .outfit-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      font-size: var(--fs-xs);
+    }
+
+    .breakdown-item {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: var(--space-xs);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .breakdown-label {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .breakdown-value {
+      color: var(--color-text-light);
+    }
+
+    .tags {
+      display: flex;
+      gap: var(--space-xs);
+      flex-wrap: wrap;
+      margin-top: var(--space-sm);
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f0f0f0;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: var(--fs-xs);
+      color: var(--color-text-light);
+    }
+
+    .key-insight {
+      background: #f0f8ff;
+      border-left: 4px solid var(--color-link);
+      padding: var(--space-md);
+      margin-bottom: var(--space-lg);
+      border-radius: 4px;
+    }
+
+    .key-insight strong {
+      color: var(--color-link);
+      display: block;
+      font-size: var(--fs-sm);
+      margin-bottom: var(--space-xs);
+    }
+
+    .footer {
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+      color: var(--color-text-light);
+      font-size: var(--fs-sm);
+      border-top: 1px solid var(--color-border);
+      margin-top: var(--space-xl);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: var(--space-lg);
+      color: var(--color-link);
+      text-decoration: none;
+      font-size: var(--fs-sm);
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .outfits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      .nav {
+        flex-direction: column;
+        gap: var(--space-sm);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Wardrobe Case Studies</h1>
+      <p>Deep dives into the real casual wear of billionaire women</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="nav">
+      <a href="../en/index.html">← Back to Home</a>
+      <a href="../en/women-index.html">All Profiles</a>
+    </div>
+
+    <!-- RIHANNA Case Study -->
+    <div class="case-study" id="rihanna">
+      <h2>Rihanna (Fenty)</h2>
+      <div class="meta">
+        <span>💰 Net Worth: $1.7B</span>
+        <span>🎯 Archetype: Creative Founder</span>
+        <span>🏷️ Logo Score: 2/10</span>
+        <span>🏗️ Architecture: 10/10</span>
+      </div>
+
+      <div class="style-summary">
+        <h3>Style Philosophy</h3>
+        <p>Rihanna's casual wear is studied art direction disguised as effortlessness. Every oversized blazer is paired with architectural precision. Zero visible logos because the quality speaks first. Her wardrobe demonstrates complete command of scale, proportion, and designer craftsmanship. She doesn't follow trends—she architects them.</p>
+      </div>
+
+      <div class="key-insight">
+        <strong>Key Finding:</strong> Rihanna treats casual wear as a design system. Oversized silhouettes (Vetements, Margiela) meet tailored basics (The Row). The contrast between volume and fit creates intentional complexity in "simple" outfits.
+      </div>
+
+      <div class="outfits-grid">
+        <div class="outfit">
+          <div class="outfit-image">Oversized Blazer + Tailored Trousers</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Architectural Foundation</div>
+            <div class="outfit-desc">Cream oversized blazer (likely Vetements or Margiela), tailored black trousers, minimal jewelry. This is Rihanna's uniform: precise structure hidden under generous volume.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Silhouette</span>
+                <span class="breakdown-value">Oversized + Tailored</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Color Palette</span>
+                <span class="breakdown-value">Neutral (Cream/Black)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Key Pieces</span>
+                <span class="breakdown-value">Designer Blazer, High-Waist Trousers</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Logo Visibility</span>
+                <span class="breakdown-value">0/10</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Architectural</span>
+              <span class="tag">Minimalist</span>
+              <span class="tag">High-Fashion</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="outfit">
+          <div class="outfit-image">Statement Coat + Simple Base</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Volume Play</div>
+            <div class="outfit-desc">Oversized wool coat (architectural cut), simple white tee, tailored jeans. The coat does all the visual work while the base remains intentionally plain. This is restraint through proportion rather than color.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Silhouette</span>
+                <span class="breakdown-value">Statement Outerwear</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Base Layer</span>
+                <span class="breakdown-value">White T-Shirt + Denim</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Price Tier</span>
+                <span class="breakdown-value">Luxury Outerwear + Basic</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Brand Visibility</span>
+                <span class="breakdown-value">1/10</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Statement Piece</span>
+              <span class="tag">Proportion-Focused</span>
+              <span class="tag">Luxury Casual</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="outfit">
+          <div class="outfit-image">Neutral Monochrome + Minimal Shoes</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Monochrome Mastery</div>
+            <div class="outfit-desc">All-neutral outfit: beige sweater, cream trousers, white sneakers. The complexity comes from fabric choice (likely cashmere, wool blends) not color. This demonstrates wealth through material quality, not brand visibility.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Color Palette</span>
+                <span class="breakdown-value">Full Monochrome</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Fabric Focus</span>
+                <span class="breakdown-value">Premium Natural Fibers</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Accessories</span>
+                <span class="breakdown-value">Minimal (Jewelry or Bag)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Complexity Level</span>
+                <span class="breakdown-value">Subtle (High Sophistication)</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Monochrome</span>
+              <span class="tag">Refined</span>
+              <span class="tag">Fabric-Focused</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="outfit">
+          <div class="outfit-image">Tailored Midi + Statement Shoe</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Precision Detail</div>
+            <div class="outfit-desc">Perfectly tailored midi skirt, fitted turtleneck, architectural shoe. Rihanna's silhouettes are never accidental. The midi + turtleneck combination shows body awareness through tailoring, not exposure.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Tailoring</span>
+                <span class="breakdown-value">Perfect Fit</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Proportion</span>
+                <span class="breakdown-value">Balanced Midi + Fitted Top</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Statement Element</span>
+                <span class="breakdown-value">Architectural Shoe</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Overall Feel</span>
+                <span class="breakdown-value">Intentional & Considered</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Tailored</span>
+              <span class="tag">Proportional</span>
+              <span class="tag">Design-Focused</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="key-insight">
+        <strong>Why This Matters:</strong> Rihanna's wardrobe proves that casual doesn't mean simple. Her outfits contain architectural complexity that requires significant design knowledge to execute. She's essentially building outfits like design systems—understanding silhouette, proportion, fabric, and scale before choosing a single piece.
+      </div>
+    </div>
+
+    <!-- MELANIE PERKINS Case Study -->
+    <div class="case-study" id="melanie">
+      <h2>Melanie Perkins (Canva)</h2>
+      <div class="meta">
+        <span>💰 Net Worth: $26B Valuation</span>
+        <span>🎯 Archetype: Tech Founder Minimalist</span>
+        <span>🏷️ Logo Score: 0/10</span>
+        <span>👕 Uniform: 10/10</span>
+      </div>
+
+      <div class="style-summary">
+        <h3>Style Philosophy</h3>
+        <p>Melanie Perkins is the poster child for deliberate wardrobe systematization. She wears the same uniform repeatedly: dark turtleneck, tailored black pants, minimal jewelry. This isn't laziness—it's strategic decision-making. By removing wardrobe decisions entirely, she eliminates decision fatigue and commits all cognitive energy to building a $26B company. Her wardrobe is a tool, not a statement.</p>
+      </div>
+
+      <div class="key-insight">
+        <strong>Key Finding:</strong> Melanie's uniform approach mirrors Steve Jobs' strategy exactly. Repetitive dark turtlenecks (likely from a specific vendor), tailored basics, zero logos. The psychological purpose: build a system so you never have to think about clothes again.
+      </div>
+
+      <div class="outfits-grid">
+        <div class="outfit">
+          <div class="outfit-image">Black Turtleneck + Black Tailored Pants</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Daily Uniform</div>
+            <div class="outfit-desc">Dark merino wool turtleneck, tailored black trousers, minimal watch. This is Melanie's default work outfit. Worn repeatedly because the point is consistency, not variety.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Garments</span>
+                <span class="breakdown-value">Turtleneck + Trousers</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Color Palette</span>
+                <span class="breakdown-value">Monochrome Black</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Accessories</span>
+                <span class="breakdown-value">Minimal (Watch Only)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Decision-Making</span>
+                <span class="breakdown-value">Automated</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Uniform</span>
+              <span class="tag">Minimalist</span>
+              <span class="tag">Intentional</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="outfit">
+          <div class="outfit-image">Turtleneck + Dark Jeans</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Casual Variant</div>
+            <div class="outfit-desc">Same turtleneck, dark tailored jeans instead of trousers. This is Melanie's "casual Friday" outfit. The variation is minimal—essentially the same uniform with one different piece.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Top</span>
+                <span class="breakdown-value">Dark Turtleneck</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Bottom</span>
+                <span class="breakdown-value">Dark Tailored Jeans</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Variation</span>
+                <span class="breakdown-value">Minimal (1 piece change)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">System Flexibility</span>
+                <span class="breakdown-value">High (Same Top Works)</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">System-Based</span>
+              <span class="tag">Uniform Variant</span>
+              <span class="tag">Efficient</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="outfit">
+          <div class="outfit-image">Dark Turtleneck + Minimal Layering</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Layered Version</div>
+            <div class="outfit-desc">Dark turtleneck as a base layer under a simple neutral blazer or sweater. Still maintaining the monochromatic palette and minimal visual complexity. Same uniform, different configuration for different occasions.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Core Piece</span>
+                <span class="breakdown-value">Turtleneck</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Layer</span>
+                <span class="breakdown-value">Neutral Sweater/Blazer</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Occasion</span>
+                <span class="breakdown-value">Formal Meetings</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Complexity</span>
+                <span class="breakdown-value">Still Minimal</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Layered</span>
+              <span class="tag">Formal-Ready</span>
+              <span class="tag">Uniform-Based</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="key-insight">
+        <strong>Why This Matters:</strong> Melanie's approach demonstrates that the most successful tech founders often remove fashion entirely from their decision-making process. By wearing the same outfit repeatedly, she's eliminated wardrobe decisions—freeing her mind for product decisions. This is a very intentional strategy to maximize cognitive resources.
+      </div>
+    </div>
+
+    <!-- FRANCOISE BETTENCOURT MEYERS Case Study -->
+    <div class="case-study" id="francoise">
+      <h2>Francoise Bettencourt Meyers (L'Oréal)</h2>
+      <div class="meta">
+        <span>💰 Net Worth: $95.2B (World's Richest Woman)</span>
+        <span>🎯 Archetype: Heritage Heiress</span>
+        <span>🏷️ Logo Score: 0/10</span>
+        <span>✨ Tailoring: 10/10</span>
+      </div>
+
+      <div class="style-summary">
+        <h3>Style Philosophy</h3>
+        <p>Francoise Bettencourt Meyers represents old money restraint at the highest level. As the world's richest woman and L'Oréal heiress, she dresses with absolute minimalism: navy, cream, and camel only. Every piece is tailored by the same atelier. She doesn't chase trends because her wealth is generational—transcending fashion cycles. Her wardrobe is a masterclass in inherited wealth signaling through absolute refinement.</p>
+      </div>
+
+      <div class="key-insight">
+        <strong>Key Finding:</strong> With $95B net worth, Francoise has ZERO need to signal wealth through visible branding. Her outfits communicate heritage through tailoring precision, fabric quality, and studied simplicity. This is the pinnacle of old money fashion: so subtle that only other wealthy people recognize it.
+      </div>
+
+      <div class="outfits-grid">
+        <div class="outfit">
+          <div class="outfit-image">Navy Blazer + Cream Silk Blouse</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Classic Combination</div>
+            <div class="outfit-desc">Navy tailored blazer (bespoke atelier), cream silk blouse, minimal jewelry. This is Francoise's signature: perfect tailoring, neutral palette, inherited authority. The blazer is likely from her personal atelier in Paris.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Blazer</span>
+                <span class="breakdown-value">Bespoke Navy Wool</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Blouse</span>
+                <span class="breakdown-value">Silk (Cream/White)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Accessories</span>
+                <span class="breakdown-value">Minimal (Quality Jewelry)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Brand Visibility</span>
+                <span class="breakdown-value">0/10 (Zero Logos)</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Bespoke</span>
+              <span class="tag">Heritage</span>
+              <span class="tag">Timeless</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="outfit">
+          <div class="outfit-image">Camel Coat + Neutral Palette</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Subtle Elegance</div>
+            <div class="outfit-desc">Camel wool coat (perfect tailoring), cream or grey undertones. This color combination is classic European old money. The coat is a statement through perfection, not drama.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Coat Color</span>
+                <span class="breakdown-value">Camel</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Base Layer</span>
+                <span class="breakdown-value">Cream/Grey</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Tailoring</span>
+                <span class="breakdown-value">Impeccable</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Aesthetic</span>
+                <span class="breakdown-value">European Classic</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Classic</span>
+              <span class="tag">Restrained</span>
+              <span class="tag">European</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="outfit">
+          <div class="outfit-image">Grey Tailored Dress + Simple Shoes</div>
+          <div class="outfit-details">
+            <div class="outfit-title">The Understated Statement</div>
+            <div class="outfit-desc">Grey tailored dress (bespoke fit), simple shoes, minimal jewelry. The dress is impeccably cut to the exact proportions of her body. This is wealth expressed through perfect fit and fabric quality.</div>
+            <div class="outfit-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Dress</span>
+                <span class="breakdown-value">Bespoke Grey Wool</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Fit</span>
+                <span class="breakdown-value">Perfect (Custom Tailored)</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Footwear</span>
+                <span class="breakdown-value">Classic, Simple</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Overall Philosophy</span>
+                <span class="breakdown-value">Refinement through Simplicity</span>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Bespoke</span>
+              <span class="tag">Refined</span>
+              <span class="tag">Timeless</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="key-insight">
+        <strong>Why This Matters:</strong> Francoise represents the absolute pinnacle of old money fashion. With $95B in inherited wealth, she has ZERO need to display brands or logos. Her wardrobe communicates through perfect tailoring, restricted color palette (navy, cream, camel only), and precision fit. This is what wealth looks like when it's so deep that visibility becomes irrelevant.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>BillionaireCasual.com — Wardrobe Case Studies</p>
+    <p>Detailed analysis of real billionaire women's casual wear. All photos CC BY-SA from Wikimedia Commons.</p>
+  </div>
+</body>
+</html>
